@@ -52,5 +52,10 @@ return [
     'Email' => ' Email:',
     'Call' => 'Call:',
     'Send Message' => 'Send Message',
+    'Your Name'     => 'Your Name',
+    'Your Email'    => 'Your Email',
+    'Subject'   => 'Subject',
+    'Message'   => 'Your message',
+
 ];
 

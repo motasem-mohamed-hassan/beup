@@ -23,7 +23,7 @@
                                 #
                             </th>
                             <th style="width: 40%">
-                                Post Title
+                                Post Title EN
                             </th>
                             <th style="width: 20%">
                                 Category name

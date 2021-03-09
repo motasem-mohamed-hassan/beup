@@ -179,7 +179,7 @@
           <img src="{{ asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">name</a>
         </div>
       </div>
 
@@ -191,28 +191,42 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 categories
-                <span class="right badge badge-danger"></span>
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ route('dashboard.posts.index') }}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-blog"></i>
               <p>
                 Posts
-                <span class="right badge badge-danger"></span>
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ route('dashboard.teams.index') }}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-address-card"></i>
               <p>
                 Teams
-                <span class="right badge badge-danger"></span>
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{ route('dashboard.info') }}" class="nav-link">
+              <i class="nav-icon fas fa-info"></i>
+              <p>
+                Info
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('dashboard.mail') }}" class="nav-link">
+              <i class="nav-icon fas fa-mail-bulk"></i>
+              <p>
+                Mail
+              </p>
+            </a>
+          </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -233,15 +247,6 @@
 
     @yield('content')
   </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.0-rc.1
-    </div>
-  </footer>
-
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->

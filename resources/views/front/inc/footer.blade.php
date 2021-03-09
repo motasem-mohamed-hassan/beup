@@ -8,10 +8,9 @@
               <h3>Bootslander</h3>
               <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                {{ $info->location }}<br><br>
+                <strong>Phone:</strong> {{ $info->phone }}<br>
+                <strong>Email:</strong> {{ $info->email }}<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -37,11 +36,11 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                @foreach ($categories as $category)
+                    <li><i class="bx bx-chevron-right"></i>
+                        <a href="{{ route('category', $category->id) }}">{{ $category->name }}">{{ $category->name }}</a>
+                    </li>
+                @endforeach
             </ul>
           </div>
 
@@ -58,7 +57,7 @@
       </div>
     </div>
 
-    <div class="container">
+    {{-- <div class="container">
       <div class="copyright">
         &copy; Copyright <strong><span>Bootslander</span></strong>. All Rights Reserved
       </div>
@@ -69,5 +68,5 @@
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
-    </div>
+    </div> --}}
   </footer>

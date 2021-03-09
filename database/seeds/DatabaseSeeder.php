@@ -11,6 +11,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        DB::table('users')->insert([
+            'id'    =>  '1',
+            'name'  => 'admin',
+            'email' => 'admin@admin.com',
+            'password' => Hash::make('123456789'),
+        ]);
+
+        DB::table('infos')->insert([
+            'id'    =>  '1',
+            'phone' =>  '123456789',
+            'email' =>  'test@email.com',
+            'location_en'   => 'location in EN',
+            'location_ar'   => 'العنوان باللغة العربية',
+            'whatsapp_link' =>  'https://web.whatsapp.com/'
+        ]);
     }
 }

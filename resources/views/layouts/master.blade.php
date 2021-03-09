@@ -25,6 +25,10 @@
   <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
 
+    <!-- toaster link css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet"/>
+
+
   <!-- Template Main CSS File -->
     @if(LaravelLocalization::getCurrentLocale() == 'en')
         <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
@@ -69,7 +73,10 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('assets/js/main.js') }}"></script>
+  
+
 
 </body>
+@toastr_render
 
 </html>

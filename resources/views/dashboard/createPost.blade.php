@@ -25,6 +25,10 @@
                   <textarea id="compose-textarea" name="body_ar" class="form-control"  placeholder="Body Content In AR" style="height: 300px"></textarea>
               </div>
               <div class="form-group">
+                <input type="text" class="form-control" name="link" placeholder="project link">
+              </div>
+
+              <div class="form-group">
                 <div class="btn btn-default btn-file">
                   <i class="fas fa-paperclip"></i> Attachment Image
                   <input type="file" name="image">

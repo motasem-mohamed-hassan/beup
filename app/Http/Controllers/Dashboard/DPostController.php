@@ -15,6 +15,7 @@ class DPostController extends Controller
     public function create($id)
     {
         $category_id = $id;
+
         return view('dashboard.createPost', compact('category_id'));
     }
 
@@ -26,18 +27,19 @@ class DPostController extends Controller
         $post->title_ar     = $request->title_ar;
         $post->body_en     = $request->body_en;
         $post->body_ar     = $request->body_ar;
+        $post->link         = $request->link;
 
 
         $imageurl = $request->file('image');
         $imageurl->getClientOriginalName();
         $ext    = $imageurl->getClientOriginalExtension();
         $file   = date('YmdHis').rand(1,99999).'.'.$ext;
-        $imageurl->storeAs('public/avatars', $file);
+        $imageurl->storeAs('public/posts', $file);
 
         $post->image = $file;
         $post->save();
 
-
+        toastr()->success('Created successfully');
         return redirect()->route('dashboard.categories.index');
     }
 
@@ -66,19 +68,20 @@ class DPostController extends Controller
 
 
         if($request->hasFile('image')){
-            File::delete('public/avatars/'.$post->image);
-            Storage::disk('local')->delete('public/avatars/'.$post->image);
+            File::delete('public/posts/'.$post->image);
+            Storage::disk('local')->delete('public/posts/'.$post->image);
 
             $posturl = $request->file('image');
             $posturl->getClientOriginalName();
             $ext    = $posturl->getClientOriginalExtension();
             $file   = date('YmdHis').rand(1,99999).'.'.$ext;
-            $posturl->storeAs('public/avatars', $file);
+            $posturl->storeAs('public/posts', $file);
 
             $post->image = $file;
         }
         $post->save();
 
+        toastr()->success('Updated Successfully');
         return redirect()->route('dashboard.posts.index');
     }
 
@@ -86,9 +89,10 @@ class DPostController extends Controller
     {
         $post = Post::find($id);
         File::delete($post->image);
-        Storage::disk('local')->delete('public/avatars/'.$post->image);
+        Storage::disk('local')->delete('public/posts/'.$post->image);
         $post->delete();
 
+        toastr()->success('Deleted successfully');
         return redirect()->route('dashboard.posts.index');
     }
 

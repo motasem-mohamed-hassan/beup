@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->text('title_ar');
             $table->text('body_en');
             $table->text('body_ar');
+            $table->text('link');
             $table->string('image');
             $table->timestamps();
 

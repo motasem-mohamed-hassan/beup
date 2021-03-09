@@ -23,7 +23,7 @@ class DCategoriesController extends Controller
 
         return response()->json([
             'status'    => 'success',
-            'msg'       => 'تم الاضافة بنجاح',
+            'msg'       => 'Created successfully',
             'data'      => $category
         ]);
     }
@@ -37,7 +37,7 @@ class DCategoriesController extends Controller
 
         return response()->json([
             'status'    => 'success',
-            'msg'       => 'تم التعديل بنجاح',
+            'msg'       => 'Updated successfully',
             'data'      => $category
         ]);
     }
@@ -49,7 +49,7 @@ class DCategoriesController extends Controller
 
         return response()->json([
             'status'    => 'true',
-            'msg'       => 'تم المسح بنجاح',
+            'msg'       => 'Deleted successfully',
         ]);
 
     }

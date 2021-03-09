@@ -101,7 +101,7 @@
                 @if($key == 9)<i class="ri-disc-line" style="color: #b20969;"></i>@endif
                 @if($key == 10)<i class="ri-base-station-line" style="color: #ff5828;"></i>@endif
                 @if($key == 11)<i class="ri-fingerprint-line" style="color: #29cc61;"></i>@endif
-              <h3><a href="{{ route('category', $category->id) }}">{{ $category->name_en }}</a></h3>
+              <h3><a href="{{ route('category', $category->id) }}">{{ $category->name }}</a></h3>
             </div>
           </div>
           @endforeach
@@ -152,100 +152,6 @@
       </div>
     </section><!-- End Counts Section -->
 
-    <!-- ======= Details Section ======= -->
-    {{-- <section id="details" class="details">
-      <div class="container">
-
-        <div class="row content">
-          <div class="col-md-4" data-aos="fade-right">
-            <img src="assets/img/details-1.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-8 pt-4" data-aos="fade-up">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="icofont-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="icofont-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="icofont-check"></i> Iure at voluptas aspernatur dignissimos doloribus repudiandae.</li>
-              <li><i class="icofont-check"></i> Est ipsa assumenda id facilis nesciunt placeat sed doloribus praesentium.</li>
-            </ul>
-            <p>
-              Voluptas nisi in quia excepturi nihil voluptas nam et ut. Expedita omnis eum consequatur non. Sed in asperiores aut repellendus. Error quisquam ab maiores. Quibusdam sit in officia
-            </p>
-          </div>
-        </div>
-
-        <div class="row content">
-          <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
-            <img src="assets/img/details-2.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
-            <h3>Corporis temporibus maiores provident</h3>
-            <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-            <p>
-              Inventore id enim dolor dicta qui et magni molestiae. Mollitia optio officia illum ut cupiditate eos autem. Soluta dolorum repellendus repellat amet autem rerum illum in. Quibusdam occaecati est nisi esse. Saepe aut dignissimos distinctio id enim.
-            </p>
-          </div>
-        </div>
-
-        <div class="row content">
-          <div class="col-md-4" data-aos="fade-right">
-            <img src="assets/img/details-3.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-8 pt-5" data-aos="fade-up">
-            <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
-            <ul>
-              <li><i class="icofont-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="icofont-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="icofont-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
-            </ul>
-            <p>
-              Qui consequatur temporibus. Enim et corporis sit sunt harum praesentium suscipit ut voluptatem. Et nihil magni debitis consequatur est.
-            </p>
-            <p>
-              Suscipit enim et. Ut optio esse quidem quam reiciendis esse odit excepturi. Vel dolores rerum soluta explicabo vel fugiat eum non.
-            </p>
-          </div>
-        </div>
-
-        <div class="row content">
-          <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
-            <img src="assets/img/details-4.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
-            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
-            <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-            <ul>
-              <li><i class="icofont-check"></i> Et praesentium laboriosam architecto nam .</li>
-              <li><i class="icofont-check"></i> Eius et voluptate. Enim earum tempore aliquid. Nobis et sunt consequatur. Aut repellat in numquam velit quo dignissimos et.</li>
-              <li><i class="icofont-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </section> --}}
-    <!-- End Details Section -->
 
     <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery">
@@ -403,71 +309,23 @@
         </div>
 
         <div class="row" data-aos="fade-left">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
+            @foreach ($team as $member)
+            <div class="col-lg-3 col-md-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="pic"><img src="{{asset('storage/avatars/'.$member->image)}}" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>{{$member->name}}</h4>
+                    <span>{{$member->position}}</span>
+                    <div class="social">
+                      <a href=""><i class="icofont-twitter"></i></a>
+                      <a href=""><i class="icofont-facebook"></i></a>
+                      <a href=""><i class="icofont-instagram"></i></a>
+                      <a href=""><i class="icofont-linkedin"></i></a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="member" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
+            @endforeach
         </div>
 
       </div>
@@ -490,19 +348,19 @@
               <div class="address">
                 <i class="icofont-google-map"></i>
                 <h4>{{ __('home.Location') }}</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>{{ $info->location }}</p>
               </div>
 
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4>{{ __('home.Email') }}</h4>
-                <p>info@example.com</p>
+                <p>{{ $info->email }}</p>
               </div>
 
               <div class="phone">
                 <i class="icofont-phone"></i>
                 <h4>{{ __('home.Call') }}</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>{{ $info->phone }}</p>
               </div>
 
             </div>
@@ -511,31 +369,35 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="form-row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
+            <form action="{{ route('send.mail') }}" method="post" role="form">
+                @csrf
+                <div class="form-row">
+                    <div class="col-md-6 form-group">
+                        <input type="text" name="name" class="form-control @error('title') is-invalid @enderror" id="name" placeholder="{{ __('home.Your Name') }}" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                        @error('name')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input type="email" class="form-control @error('title') is-invalid @enderror" name="email" id="email" placeholder="{{ __('home.Your Email') }}" data-rule="email" data-msg="Please enter a valid email" />
+                        @error('email')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
                 </div>
-                <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
+                <div class="form-group">
+                    <input type="text" class="form-control @error('title') is-invalid @enderror" name="subject" id="subject" placeholder="{{ __('home.Subject') }}" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                        @error('subject')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                 </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">{{ __('home.Send Message') }}</button></div>
+                <div class="form-group">
+                    <textarea class="form-control @error('title') is-invalid @enderror" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="{{ __('home.Message') }}"></textarea>
+                        @error('message')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                </div>
+                    <div class="text-center"><button type="submit">{{ __('home.Send Message') }}</button></div>
             </form>
 
           </div>

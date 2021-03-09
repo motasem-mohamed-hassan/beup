@@ -18,6 +18,8 @@ Route::prefix(LaravelLocalization::setLocale())->middleware(['localeSessionRedir
         Route::get('/', 'HomeController@index')->name('home');
         Route::get('/category/{id}','CategoryController@show')->name('category');
 
+        Route::post('/send','HomeController@sendMail')->name('send.mail');
+
     });
 });
 Route::prefix('/dashboard')->middleware('auth')->namespace('Dashboard')->as('dashboard.')->group(function(){
@@ -35,6 +37,14 @@ Route::prefix('/dashboard')->middleware('auth')->namespace('Dashboard')->as('das
     Route::delete('/post/delete/{id}', 'DPostController@delete')->name('post.delete');
 
     Route::get('/teams', 'DTeamController@index')->name('teams.index');
+    Route::post('/teams', 'DTeamController@store')->name('teams.store');
+
+    Route::get('/info', 'DInfoController@index')->name('info');
+    Route::put('/info', 'DInfoController@update')->name('info.update');
+
+    Route::get('/mail', 'DMailController@index')->name('mail');
+    Route::get('/mail/{id}', 'DMailController@show')->name('mail.show');
+    Route::delete('/mail/{id}/delete', 'DMailController@delete')->name('mail.delete');
 
 });
 
