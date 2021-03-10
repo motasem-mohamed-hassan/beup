@@ -48,20 +48,19 @@
                   <li class="list-group-item">
                     <div class="d-flex justify-content-between category_name{{ $category->id }}">
                       {{ $category->name_en }} -- {{ $category->name_ar }}
-
-                      <div class="button-group d-flex">
-                        <button type="button"
-                            category_name_en="{{ $category->name_en }}"
-                            category_name_ar="{{ $category->name_ar }}"
-                            category_id="{{ $category->id }}"
-                            class="editBtn btn btn-sm btn-primary mr-1 edit-category" data-toggle="modal" data-target="#editCategoryModal">Edit</button>
-
                         <form action="#" method="POST">
-                          @csrf
-                          <button type="submit" category_id="{{ $category->id }}" class="delete_btn btn btn-sm btn-danger">Delete</button>
+                            <div class="button-group d-flex">
+                                <button type="button"
+                                    category_name_en="{{ $category->name_en }}"
+                                    category_name_ar="{{ $category->name_ar }}"
+                                    category_id="{{ $category->id }}"
+                                    class="editBtn btn btn-sm btn-primary mr-1 edit-category" data-toggle="modal" data-target="#editCategoryModal">Edit</button>
+
+                                @csrf
+                                <button type="submit" category_id="{{ $category->id }}" class="delete_btn btn btn-sm ml-1 btn-danger">Delete</button>
+                                <a class="btn btn-secondary" href="{{ route('dashboard.post.create', $category->id) }}">Add Post</a>
+                            </div>
                         </form>
-                        <a class="btn btn-secondary" href="{{ route('dashboard.post.create', $category->id) }}">Add Post</a>
-                      </div>
                     </div>
                   </li>
                 @endforeach
@@ -124,15 +123,19 @@
                         `<li class="list-group-item">
                         <div class="d-flex justify-content-between category_name${id}">
                             ${name_en} -- ${name_ar}
-
-                            <div class="button-group d-flex">
-                            <button type="button" category_id="${id}" class="editBtn btn btn-sm btn-primary mr-1 edit-category" data-toggle="modal" data-target="#editCategoryModal">Edit</button>
-
                             <form action="#" method="POST">
-                                @csrf
-                                <button type="submit" category_id="${id}" class="delete_btn btn btn-sm btn-danger">Delete</button>
+                                <div class="button-group d-flex">
+                                    <button type="button"
+                                        category_name_en="${name_en}"
+                                        category_name_ar="${name_ar}"
+                                        category_id="${id}"
+                                        class="editBtn btn btn-sm btn-primary mr-1 edit-category" data-toggle="modal" data-target="#editCategoryModal">Edit</button>
+
+                                    @csrf
+                                    <button type="submit" category_id="${id}" class="delete_btn btn btn-sm ml-1 btn-danger">Delete</button>
+                                    <a class="btn btn-secondary" href="post/create/${id}">Add Post</a>
+                                </div>
                             </form>
-                            </div>
                         </div>
                         </li>`
                     );

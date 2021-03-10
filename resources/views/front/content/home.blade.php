@@ -408,7 +408,7 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                 </div>
-                    <div class="text-center"><button type="submit">{{ __('home.Send Message') }}</button></div>
+                    <div class="text-center"><button class="btn btn-success" type="submit">{{ __('home.Send Message') }}</button></div>
             </form>
 
           </div>
