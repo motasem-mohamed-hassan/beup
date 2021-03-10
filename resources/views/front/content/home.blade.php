@@ -81,8 +81,8 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Features</h2>
-          <p>Check The Features</p>
+          <h2>{{ __('home.Features') }}</h2>
+          <p>{{ __('home.Check The Features') }}</p>
         </div>
 
         <div class="row" data-aos="fade-left">
@@ -163,6 +163,15 @@
         </div>
 
         <div class="row no-gutters" data-aos="fade-left">
+            @foreach ($posts as $post)
+            <div class="col-lg-3 col-md-4">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="assets/img/gallery/gallery-1.jpg" class="venobox" data-gall="gallery-item">
+                    <img src="{{ asset('storage/posts/'.$post->image) }}" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            @endforeach
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
@@ -239,16 +248,18 @@
 
         <div class="owl-carousel testimonials-carousel" data-aos="zoom-in">
 
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-            <h3>Saul Goodman</h3>
-            <h4>Ceo &amp; Founder</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
+            @foreach ($logos as $logo)
+            <div class="testimonial-item">
+                <img src="{{ asset('storage/logos/'.$logo->image) }}" class="testimonial-img" alt="">
+                <h3>{{ $logo->name }}</h3>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  {{ $logo->words }}
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            @endforeach
+
 
           <div class="testimonial-item">
             <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">

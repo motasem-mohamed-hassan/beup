@@ -22,7 +22,7 @@ Route::prefix(LaravelLocalization::setLocale())->middleware(['localeSessionRedir
 
     });
 });
-Route::prefix('/dashboard')->middleware('auth')->namespace('Dashboard')->as('dashboard.')->group(function(){
+Route::prefix('/dashboard')->middleware(['auth', 'role:admin|superAdmin'])->namespace('Dashboard')->as('dashboard.')->group(function(){
     Route::get('/', 'DHomeController@index')->name('home');
     Route::get('/categories', 'DCategoriesController@index')->name('categories.index');
     Route::post('/categories', 'DCategoriesController@store')->name('categories.store');
@@ -38,6 +38,7 @@ Route::prefix('/dashboard')->middleware('auth')->namespace('Dashboard')->as('das
 
     Route::get('/teams', 'DTeamController@index')->name('teams.index');
     Route::post('/teams', 'DTeamController@store')->name('teams.store');
+    Route::delete('/team/delete/{id}', 'DTeamController@delete')->name('team.delete');
 
     Route::get('/info', 'DInfoController@index')->name('info');
     Route::put('/info', 'DInfoController@update')->name('info.update');
@@ -45,6 +46,13 @@ Route::prefix('/dashboard')->middleware('auth')->namespace('Dashboard')->as('das
     Route::get('/mail', 'DMailController@index')->name('mail');
     Route::get('/mail/{id}', 'DMailController@show')->name('mail.show');
     Route::delete('/mail/{id}/delete', 'DMailController@delete')->name('mail.delete');
+
+    Route::get('logo', 'DLogosController@index')->name('logos.index');
+    Route::post('logo', 'DLogosController@store')->name('logo.store');
+    Route::delete('logo/delete/{id}', 'DLogosController@delete')->name('logo.delete');
+
+    Route::get('admins', 'DAdminController@index')->name('admins.index');
+    Route::put('admin/accept/{id}', 'DAdminController@makeAdmin')->name('admins.makeAdmin');
 
 });
 

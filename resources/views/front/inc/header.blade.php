@@ -14,11 +14,10 @@
           <li><a href="#features">Features</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="#pricing">Pricing</a></li>
           <li class="drop-down"><a href="">Categories</a>
             <ul>
                 @foreach($categories as $category)
-                <li class="drop-down"><a href="{{ route('category', $category->id) }}">{{ $category->name_en }}</a></li>
+                <li class="drop-down"><a href="{{ route('category', $category->id) }}">{{ $category->name }}</a></li>
                 @endforeach
             </ul>
           </li>

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Http\Controllers\Controller;
 use App\Team;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class DTeamController extends Controller
 {
@@ -34,4 +36,16 @@ class DTeamController extends Controller
         toastr()->success('Created Successfully');
         return redirect()->route('dashboard.teams.index');
     }
+
+    public function delete($id)
+    {
+        $team = Team::find($id);
+        File::delete($team->image);
+        Storage::disk('local')->delete('public/avatars/'.$team->image);
+        $team->delete();
+
+        toastr()->success('Deleted Successfully');
+        return redirect()->back();
+    }
+
 }

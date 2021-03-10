@@ -6,7 +6,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">تعديل القسم</h5>
+                <h5 class="modal-title">Edit Category</h5>
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -18,17 +18,17 @@
 
                 <div class="modal-body">
                   <div class="form-group">
-                    <input type="text" id="editName_en" name="name_en" class="form-control" value="تعديل القسم انجليزي">
+                    <input type="text" id="editName_en" name="name_en" class="form-control" value="Category Name in EN">
                   </div>
                   <div class="form-group">
-                    <input type="text" id="editName_ar" name="name_ar" class="form-control" value="تعديل القسم عربي">
+                    <input type="text" id="editName_ar" name="name_ar" class="form-control" value="Category NAme in AR">
                   </div>
                 </div>
 
                 <div class="modal-footer">
                     <input type="text" name="id" id="currentid" class="form-control" value="" hidden>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق</button>
-                    <button type="submit" id="submitToUpdate" class="btn btn-primary" data-dismiss="modal">تعديل</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" id="submitToUpdate" class="btn btn-primary" data-dismiss="modal">Update</button>
                 </div>
               </div>
               </form>
@@ -40,7 +40,7 @@
 
           <div class="card">
             <div class="card-header">
-              <h3>الاقسام</h3>
+              <h3>Categories</h3>
             </div>
             <div class="card-body">
               <ul class="list-group" id="myTable">
@@ -73,22 +73,21 @@
         <div class="col-md-4">
           <div class="card">
             <div class="card-header">
-              <h3>اضافة قسم</h3>
+              <h3>Add New Category</h3>
             </div>
 
             <div class="card-body">
               <form action="" method="" id="createForm">
                 @csrf
                 <div class="form-group">
-                  <input type="text" name="name_en" id="name_en" class="form-control" value="{{ old('name_en') }}" placeholder="اسم القسم انجليزي" required>
+                  <input type="text" name="name_en" id="name_en" class="form-control" value="{{ old('name_en') }}" placeholder="Name in EN" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" name="name_ar" id="name_ar" class="form-control" value="{{ old('name_ar') }}" placeholder="اسم القسم عربي" required>
+                  <input type="text" name="name_ar" id="name_ar" class="form-control" value="{{ old('name_ar') }}" placeholder="Nam in AR" required>
                 </div>
 
                 <div class="form-group">
                   <button  id="submitToCreate" class="btn btn-primary">انشاء</button>
-                  <a href=""class="btn btn-info">ذهاب للفلاتر</a>
                 </div>
               </form>
             </div>

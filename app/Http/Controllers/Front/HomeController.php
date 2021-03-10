@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Front;
 
 use App\Info;
+use App\Logo;
 use App\Mail;
+use App\Post;
 use App\Team;
 use App\Category;
 use Illuminate\Http\Request;
@@ -21,7 +23,11 @@ class HomeController extends Controller
         $info = Info::select('phone', 'email', 'location_'.LaravelLocalization::getCurrentLocale().' as location',
                     'whatsapp_link')->first();
 
-        return view('front.content.home', compact('categories', 'team', 'info'));
+        $posts = Post::select('image')->get();
+
+        $logos = Logo::select('id', 'name', 'words_'.LaravelLocalization::getCurrentLocale().' as words', 'image')->get();
+
+        return view('front.content.home', compact('categories', 'team', 'info', 'posts', 'logos'));
     }
 
     public function sendMail(Request $request)

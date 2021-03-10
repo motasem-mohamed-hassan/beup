@@ -53,5 +53,7 @@ return [
     'Your Email'    => 'البريد الالكتروني الخاص بك',
     'Subject'   => 'عنوان الرسالة',
     'Message'   => 'محتوى الرسالة',
+    'Features'  => 'الأقسام',
+    'Check The Features'    => 'تفقد أعمالنا'
 
 ];

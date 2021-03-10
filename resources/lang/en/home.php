@@ -56,6 +56,7 @@ return [
     'Your Email'    => 'Your Email',
     'Subject'   => 'Subject',
     'Message'   => 'Your message',
-
+    'Features'  => 'Categories',
+    'Check The Features'    => 'Check The Features'
 ];
 

@@ -12,7 +12,7 @@
 
 body,
 html {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Tajawal', sans-serif;
     color: #444444;
     direction: rtl;
 }
@@ -32,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Tajawal", sans-serif;
 }
 
 
@@ -205,7 +205,7 @@ h6 {
     transition: 0.3s;
     font-size: 15px;
     font-weight: 500;
-    font-family: "Poppins", sans-serif;
+    font-family: "Tajawal", sans-serif;
 }
 
 .nav-menu>ul>li>a:before {
@@ -469,7 +469,7 @@ h6 {
 }
 
 #hero .btn-get-started {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Tajawal", sans-serif;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
@@ -657,7 +657,7 @@ section {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #aaaaaa;
-    font-family: "Poppins", sans-serif;
+    font-family: "Tajawal", sans-serif;
 }
 
 .section-title h2::after {
@@ -675,7 +675,7 @@ section {
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
+    font-family: "Tajawal", sans-serif;
     color: #010483;
 }
 
@@ -960,6 +960,7 @@ section {
 .counts {
     background: #f5f5ff;
     padding: 70px 0 60px;
+
 }
 
 .counts .count-box {
@@ -992,7 +993,7 @@ section {
 .counts .count-box p {
     padding: 0;
     margin: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Tajawal", sans-serif;
     font-size: 14px;
 }
 
@@ -1065,6 +1066,8 @@ section {
     background-position: center center;
     background-size: cover;
     position: relative;
+    direction: ltr;
+
 }
 
 .testimonials::before {
@@ -1275,7 +1278,7 @@ section {
     font-size: 36px;
     color: #1acc8d;
     font-weight: 600;
-    font-family: "Poppins", sans-serif;
+    font-family: "Tajawal", sans-serif;
     margin-bottom: 20px;
 }
 
@@ -1331,7 +1334,7 @@ section {
     transition: none;
     font-size: 14px;
     font-weight: 400;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Tajawal", sans-serif;
     font-weight: 600;
     transition: 0.3s;
 }
@@ -1389,7 +1392,7 @@ section {
 .faq .faq-list a {
     display: block;
     position: relative;
-    font-family: "Poppins", sans-serif;
+    font-family: "Tajawal", sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
@@ -1638,7 +1641,7 @@ section {
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Tajawal", sans-serif;
 }
 
 #footer .footer-top .social-links a {
