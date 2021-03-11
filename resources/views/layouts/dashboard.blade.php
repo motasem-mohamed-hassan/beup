@@ -98,7 +98,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('dashboard.about') }}" class="nav-link">
-              <i class="nav-icon fas fa-info"></i>
+              <i class="nav-icon fas fa-address-card"></i>
               <p>
                 About
               </p>

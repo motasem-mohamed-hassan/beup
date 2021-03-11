@@ -95,15 +95,15 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('categories')->insert([
             'id'    =>  '3',
-            'name_en'   =>  'Facebook page management',
-            'name_ar'   =>  'ادارة صفحات فيسبوك',
+            'name_en'   =>  'Marketing campaigns',
+            'name_ar'   =>  'حملات تسويقية',
             'description_en'    => '',
             'description_ar'    => '',
         ]);
         DB::table('categories')->insert([
             'id'    =>  '4',
-            'name_en'   =>  'YouTube channels management',
-            'name_ar'   =>  'ادارة قنوات يوتيوب',
+            'name_en'   =>  'Advertising campaigns',
+            'name_ar'   =>  'حملات اعلانية',
             'description_en'    => '',
             'description_ar'    => '',
         ]);
@@ -123,8 +123,8 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('categories')->insert([
             'id'    =>  '7',
-            'name_en'   =>  'Paper prints',
-            'name_ar'   =>  'مطبوعات ورقية',
+            'name_en'   =>  'Design paper prints',
+            'name_ar'   =>  'تصميم المطبوعات الورقية',
             'description_en'    => '',
             'description_ar'    => '',
         ]);
