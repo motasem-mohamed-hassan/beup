@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Front;
 
+use App\About;
 use App\Info;
 use App\Logo;
 use App\Mail;
@@ -27,7 +28,17 @@ class HomeController extends Controller
 
         $logos = Logo::select('id', 'name', 'words_'.LaravelLocalization::getCurrentLocale().' as words', 'image')->get();
 
-        return view('front.content.home', compact('categories', 'team', 'info', 'posts', 'logos'));
+        $about = About::select('id', 'video', 'head_title_'.LaravelLocalization::getCurrentLocale().' as head_title',
+                            'head_description_'.LaravelLocalization::getCurrentLocale().' as head_description',
+                            'body_title_1_'.LaravelLocalization::getCurrentLocale().' as body_title_1',
+                            'body_description_1_'.LaravelLocalization::getCurrentLocale().' as body_description_1',
+                            'body_title_2_'.LaravelLocalization::getCurrentLocale().' as body_title_2',
+                            'body_description_2_'.LaravelLocalization::getCurrentLocale().' as body_description_2',
+                            'body_title_3_'.LaravelLocalization::getCurrentLocale().' as body_title_3',
+                            'body_description_3_'.LaravelLocalization::getCurrentLocale().' as body_description_3'
+                        )->first();
+
+        return view('front.content.home', compact('categories', 'team', 'info', 'posts', 'logos', 'about'));
     }
 
     public function sendMail(Request $request)

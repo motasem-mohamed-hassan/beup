@@ -19,6 +19,8 @@ class DCategoriesController extends Controller
         $category = new Category;
         $category->name_en  =   $request->name_en;
         $category->name_ar  =   $request->name_ar;
+        $category->description_en   = $request->description_en;
+        $category->description_ar   = $request->description_ar;
         $category->save();
 
         return response()->json([
@@ -33,6 +35,8 @@ class DCategoriesController extends Controller
         $category = Category::find($request->id);
         $category->name_en  =   $request->name_en;
         $category->name_ar  =   $request->name_ar;
+        $category->description_en   = $request->description_en;
+        $category->description_ar   = $request->description_ar;
         $category->save();
 
         return response()->json([

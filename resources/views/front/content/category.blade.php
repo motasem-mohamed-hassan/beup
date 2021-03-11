@@ -4,6 +4,15 @@
 <section id="details" class="details">
     <div class="container">
 
+    <div class="row">
+        <div class=" col-md-8 pt-5 order-2 order-md-1 text-align-center" data-aos="fade-up">
+        <h3 class="align-center">{{ $this_category->name }}</h3></a>
+        <p class="font-italic ">
+            {{ $this_category->description }}
+        </p>
+    </div>
+    </div>
+
       @foreach($posts as $post)
         @if($loop->iteration % 2 == 0)
             <div class="row content">

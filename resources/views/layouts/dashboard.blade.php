@@ -97,6 +97,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{ route('dashboard.about') }}" class="nav-link">
+              <i class="nav-icon fas fa-info"></i>
+              <p>
+                About
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{ route('dashboard.mail') }}" class="nav-link">
               <i class="nav-icon fas fa-mail-bulk"></i>
               <p>

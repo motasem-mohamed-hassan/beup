@@ -17,7 +17,6 @@ Route::prefix(LaravelLocalization::setLocale())->middleware(['localeSessionRedir
     Route::namespace('Front')->group(function(){
         Route::get('/', 'HomeController@index')->name('home');
         Route::get('/category/{id}','CategoryController@show')->name('category');
-
         Route::post('/send','HomeController@sendMail')->name('send.mail');
 
     });
@@ -42,6 +41,9 @@ Route::prefix('/dashboard')->middleware(['auth', 'role:admin|superAdmin'])->name
 
     Route::get('/info', 'DInfoController@index')->name('info');
     Route::put('/info', 'DInfoController@update')->name('info.update');
+
+    Route::get('/about', 'DAboutController@index')->name('about');
+    Route::put('/about/update', 'DAboutController@update')->name('about.update');
 
     Route::get('/mail', 'DMailController@index')->name('mail');
     Route::get('/mail/{id}', 'DMailController@show')->name('mail.show');

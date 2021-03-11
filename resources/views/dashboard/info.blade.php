@@ -8,7 +8,7 @@
 
             <div class="card card-danger">
                 <div class="card-header">
-                    <h3 class="card-title">Input masks</h3>
+                    <h3 class="card-title">Info</h3>
                 </div>
                 <div class="card-body">
                     <div class="form-group">

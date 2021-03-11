@@ -21,7 +21,13 @@
                     <input type="text" id="editName_en" name="name_en" class="form-control" value="Category Name in EN">
                   </div>
                   <div class="form-group">
-                    <input type="text" id="editName_ar" name="name_ar" class="form-control" value="Category NAme in AR">
+                    <input id="editName_ar" name="name_ar" class="form-control" value="Category Name in AR">
+                  </div>
+                  <div class="form-group">
+                    <textarea type="text" id="editDescription_en" name="description_en" class="form-control" placeholder="Category Description in EN"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <textarea id="editDescription_ar" name="description_ar" class="form-control" placeholder="Category Description in AR"></textarea>
                   </div>
                 </div>
 
@@ -53,6 +59,8 @@
                                 <button type="button"
                                     category_name_en="{{ $category->name_en }}"
                                     category_name_ar="{{ $category->name_ar }}"
+                                    category_description_en="{{ $category->description_en }}"
+                                    category_description_ar="{{ $category->description_ar }}"
                                     category_id="{{ $category->id }}"
                                     class="editBtn btn btn-sm btn-primary mr-1 edit-category" data-toggle="modal" data-target="#editCategoryModal">Edit</button>
 
@@ -79,12 +87,17 @@
               <form action="" method="" id="createForm">
                 @csrf
                 <div class="form-group">
-                  <input type="text" name="name_en" id="name_en" class="form-control" value="{{ old('name_en') }}" placeholder="Name in EN" required>
+                  <input type="text" name="name_en" id="name_en" class="form-control" placeholder="Name in EN" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" name="name_ar" id="name_ar" class="form-control" value="{{ old('name_ar') }}" placeholder="Nam in AR" required>
+                  <input type="text" name="name_ar" id="name_ar" class="form-control" placeholder="Nam in AR" required>
                 </div>
-
+                <div class="form-group">
+                    <textarea type="text" id="editDescription_en" name="description_en" placeholder="Category Description in EN" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea id="editDescription_ar" name="description_ar" placeholder="Category Description in AR" class="form-control"></textarea>
+                </div>
                 <div class="form-group">
                   <button  id="submitToCreate" class="btn btn-primary">انشاء</button>
                 </div>
@@ -118,6 +131,9 @@
                     var id      = response.data.id;
                     var name_en    = response.data.name_en;
                     var name_ar     = response.data.name_ar;
+                    var description_en  = response.data.description_en;
+                    var description_ar  = response.data.description_ar;
+
 
                     $('#myTable').append(
                         `<li class="list-group-item">
@@ -128,6 +144,9 @@
                                     <button type="button"
                                         category_name_en="${name_en}"
                                         category_name_ar="${name_ar}"
+                                        category_description_en="${description_en}"
+                                        category_description_ar="${description_ar}"
+
                                         category_id="${id}"
                                         class="editBtn btn btn-sm btn-primary mr-1 edit-category" data-toggle="modal" data-target="#editCategoryModal">Edit</button>
 
@@ -159,9 +178,13 @@
                 var category_id = $(this).attr('category_id');
                 var category_name_en = $(this).attr('category_name_en');
                 var category_name_ar = $(this).attr('category_name_ar');
+                var category_description_en = $(this).attr('category_description_en');
+                var category_description_ar = $(this).attr('category_description_ar');
 
                 $('#editName_en').val(category_name_en);
                 $('#editName_ar').val(category_name_ar);
+                $('#editDescription_en').val(category_description_en);
+                $('#editDescription_ar').val(category_description_ar);
                 $('#currentid').val(category_id);
 
 

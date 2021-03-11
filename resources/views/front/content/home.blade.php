@@ -45,29 +45,29 @@
 
         <div class="row">
           <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+            <a href="{{ $about->video }}" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
-            <h3>{{ __('home.About title') }}</h3>
-            <p>{{ __('home.About') }}</p>
+            <h3>{{ $about->head_title }}</h3>
+            <p>{{ $about->head_description }}</p>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
               <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">{{ __('home.About desc title1') }}</a></h4>
-              <p class="description">{{ __('home.About desc1') }}</p>
+              <h4 class="title"><a href="">{{ $about->body_title_1 }}</a></h4>
+              <p class="description">{{ $about->body_description_1 }}</p>
             </div>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
               <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">{{ __('home.About desc title2') }}</a></h4>
-              <p class="description">{{ __('home.About desc2') }}</p>
+              <h4 class="title"><a href="">{{ $about->body_title_2 }}</a></h4>
+              <p class="description">{{ $about->body_description_2 }}</p>
             </div>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
               <div class="icon"><i class="bx bx-atom"></i></div>
-              <h4 class="title"><a href="">{{ __('home.About desc title3') }}</a></h4>
-              <p class="description">{{ __('home.About desc3') }}</p>
+              <h4 class="title"><a href="">{{ $about->body_title_3 }}</a></h4>
+              <p class="description">{{ $about->body_description_3 }}</p>
             </div>
 
           </div>
