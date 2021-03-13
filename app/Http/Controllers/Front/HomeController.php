@@ -22,7 +22,7 @@ class HomeController extends Controller
                 'position_'.LaravelLocalization::getCurrentLocale().' as position',
                 'image')->get();
         $info = Info::select('phone', 'email', 'location_'.LaravelLocalization::getCurrentLocale().' as location',
-                    'whatsapp_link')->first();
+                    'whatsapp_number', 'location_link', 'facebook_link', 'twitter_link', 'instagram_link', 'linkedin_link')->first();
 
         $posts = Post::select('image')->get();
 

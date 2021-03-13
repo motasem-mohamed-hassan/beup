@@ -58,6 +58,10 @@ Route::prefix('/dashboard')->middleware(['auth', 'role:admin|superAdmin'])->name
 
 });
 
+// Route::fallback(function(){
+//     return ('ooh!');
+// });
+
 
 Auth::routes();
 

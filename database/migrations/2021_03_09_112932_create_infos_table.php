@@ -19,7 +19,12 @@ class CreateInfosTable extends Migration
             $table->string('email');
             $table->string('location_en');
             $table->string('location_ar');
-            $table->string('whatsapp_link');
+            $table->text('location_link');
+            $table->string('whatsapp_number');
+            $table->string('twitter_link');
+            $table->string('facebook_link');
+            $table->string('instagram_link');
+            $table->string('linkedin_link');
             $table->timestamps();
         });
     }

@@ -54,19 +54,19 @@
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
               <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">{{ $about->body_title_1 }}</a></h4>
+              <h4 class="title">{{ $about->body_title_1 }}</h4>
               <p class="description">{{ $about->body_description_1 }}</p>
             </div>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
               <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">{{ $about->body_title_2 }}</a></h4>
+              <h4 class="title">{{ $about->body_title_2 }}</h4>
               <p class="description">{{ $about->body_description_2 }}</p>
             </div>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
               <div class="icon"><i class="bx bx-atom"></i></div>
-              <h4 class="title"><a href="">{{ $about->body_title_3 }}</a></h4>
+              <h4 class="title">{{ $about->body_title_3 }}</h4>
               <p class="description">{{ $about->body_description_3 }}</p>
             </div>
 
@@ -172,71 +172,6 @@
                 </div>
             </div>
             @endforeach
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-              <a href="assets/img/gallery/gallery-1.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
-              <a href="assets/img/gallery/gallery-2.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-              <a href="assets/img/gallery/gallery-3.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
-              <a href="assets/img/gallery/gallery-4.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-              <a href="assets/img/gallery/gallery-5.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="350">
-              <a href="assets/img/gallery/gallery-6.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-              <a href="assets/img/gallery/gallery-7.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
-              <a href="assets/img/gallery/gallery-8.jpg" class="venobox" data-gall="gallery-item">
-                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -282,12 +217,12 @@
                   <div class="member-info">
                     <h4>{{$member->name}}</h4>
                     <span>{{$member->position}}</span>
-                    <div class="social">
+                    {{-- <div class="social">
                       <a href=""><i class="icofont-twitter"></i></a>
                       <a href=""><i class="icofont-facebook"></i></a>
                       <a href=""><i class="icofont-instagram"></i></a>
                       <a href=""><i class="icofont-linkedin"></i></a>
-                    </div>
+                    </div> --}}
                   </div>
                 </div>
               </div>
@@ -372,6 +307,9 @@
 
       </div>
     </section><!-- End Contact Section -->
+    <a href="https://api.whatsapp.com/send?phone=002{{ $info->whatsapp_number }}&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
 
   </main><!-- End #main -->
 

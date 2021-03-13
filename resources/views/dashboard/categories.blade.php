@@ -62,11 +62,11 @@
                                     category_description_en="{{ $category->description_en }}"
                                     category_description_ar="{{ $category->description_ar }}"
                                     category_id="{{ $category->id }}"
-                                    class="editBtn btn btn-sm btn-primary mr-1 edit-category" data-toggle="modal" data-target="#editCategoryModal">Edit</button>
+                                    class="btn btn-info" style='width:4em;height:35px' data-toggle="modal" data-target="#editCategoryModal">Edit</button>
 
                                 @csrf
-                                <button type="submit" category_id="{{ $category->id }}" class="delete_btn btn btn-sm ml-1 btn-danger">Delete</button>
-                                <a class="btn btn-secondary" href="{{ route('dashboard.post.create', $category->id) }}">Add Post</a>
+                                <button style='width:4.25em;height:35px' type="submit" category_id="{{ $category->id }}" class="delete_btn btn btn-sm ml-1 btn-danger">Delete</button>
+                                <a class="btn btn-success" style='width:5.75em;height:35px' href="{{ route('dashboard.post.create', $category->id) }}">Add Post</a>
                             </div>
                         </form>
                     </div>
@@ -148,11 +148,11 @@
                                         category_description_ar="${description_ar}"
 
                                         category_id="${id}"
-                                        class="editBtn btn btn-sm btn-primary mr-1 edit-category" data-toggle="modal" data-target="#editCategoryModal">Edit</button>
+                                        class="btn btn-info" style='width:4em;height:35px' class="editBtn btn btn-sm btn-primary mr-1 edit-category" data-toggle="modal" data-target="#editCategoryModal">Edit</button>
 
                                     @csrf
-                                    <button type="submit" category_id="${id}" class="delete_btn btn btn-sm ml-1 btn-danger">Delete</button>
-                                    <a class="btn btn-secondary" href="post/create/${id}">Add Post</a>
+                                    <button style='width:4.25em;height:35px' type="submit" category_id="${id}" class="delete_btn btn btn-sm ml-1 btn-danger">Delete</button>
+                                    <a class="btn btn-success" style='width:5.75em;height:35px' href="post/create/${id}">Add Post</a>
                                 </div>
                             </form>
                         </div>

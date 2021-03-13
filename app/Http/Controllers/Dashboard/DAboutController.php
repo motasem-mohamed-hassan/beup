@@ -13,4 +13,12 @@ class DAboutController extends Controller
         $about = About::find(1);
         return view('dashboard.about', compact('about'));
     }
+
+    public function update(Request $request)
+    {
+        About::find(1)->update($request->all());
+
+        toastr()->success('updated successfully');
+        return redirect()->back();
+    }
 }

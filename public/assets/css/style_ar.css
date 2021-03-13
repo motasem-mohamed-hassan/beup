@@ -194,7 +194,7 @@ h6 {
 .nav-menu>ul>li {
     position: relative;
     white-space: nowrap;
-    float: left;
+    float: right;
 }
 
 .nav-menu a {
@@ -960,7 +960,6 @@ section {
 .counts {
     background: #f5f5ff;
     padding: 70px 0 60px;
-
 }
 
 .counts .count-box {
@@ -1067,7 +1066,6 @@ section {
     background-size: cover;
     position: relative;
     direction: ltr;
-
 }
 
 .testimonials::before {
@@ -1761,4 +1759,30 @@ section {
     #footer .footer-top .footer-info {
         margin: -20px 0 30px 0;
     }
+}
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    left: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 100;
+}
+
+.my-float {
+    margin-top: 16px;
+}
+
+#social {
+    background-image: url('../img/back-gr.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }

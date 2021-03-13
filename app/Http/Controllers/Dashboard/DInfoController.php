@@ -17,14 +17,8 @@ class DInfoController extends Controller
 
     public function update(Request $request)
     {
-        $info = Info::find(1);
-        $info->phone    = $request->phone;
-        $info->email    = $request->email;
-        $info->location_en  = $request->location_en;
-        $info->location_ar  = $request->location_ar;
-        $info->whatsapp_link = $request->whatsapp_link;
-        $info->save();
-
+        Info::find(1)->create($request->all());
+        
         toastr()->success('updated successfully');
         return redirect()->back();
     }
