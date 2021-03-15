@@ -7,15 +7,15 @@
       <div class="row">
         <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
           <div data-aos="zoom-out">
-            <h1>{{ __('home.slogane') }}<br><span>{{ __('home.company name') }}</span></h1>
-            <h2>{{ __('home.slogane2') }}</h2>
+            <h1>{{ $about->header_sec1 }}<br><span style="display:inline-block;margin:1rem 0rem 0.25rem">{{ __('home.company name') }}</span></h1>
+            <h2>{{ $about->header_sec2 }}</h2>
             <div class="text-center text-lg-left">
               <a href="#about" class="btn-get-started scrollto">{{ __('home.Get Started') }}</a>
             </div>
           </div>
         </div>
         <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+          <img src="{{ asset('storage/header/'.$about->header_image) }}" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -54,20 +54,26 @@
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
               <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title">{{ $about->body_title_1 }}</h4>
-              <p class="description">{{ $about->body_description_1 }}</p>
+              <div style="padding-right:5rem ">
+                <h4 class="title">{{ $about->body_title_1 }}</h4>
+                <p class="description">{{ $about->body_description_1 }}</p>
+              </div>
             </div>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
               <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title">{{ $about->body_title_2 }}</h4>
-              <p class="description">{{ $about->body_description_2 }}</p>
+              <div style="padding-right:5rem ">
+                <h4 class="title">{{ $about->body_title_2 }}</h4>
+                <p class="description">{{ $about->body_description_2 }}</p>
+              </div>
             </div>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
               <div class="icon"><i class="bx bx-atom"></i></div>
-              <h4 class="title">{{ $about->body_title_3 }}</h4>
-              <p class="description">{{ $about->body_description_3 }}</p>
+              <div style="padding-right:5rem ">
+                <h4 class="title">{{ $about->body_title_3 }}</h4>
+                <p class="description">{{ $about->body_description_3 }}</p>
+              </div>
             </div>
 
           </div>
@@ -217,12 +223,6 @@
                   <div class="member-info">
                     <h4>{{$member->name}}</h4>
                     <span>{{$member->position}}</span>
-                    {{-- <div class="social">
-                      <a href=""><i class="icofont-twitter"></i></a>
-                      <a href=""><i class="icofont-facebook"></i></a>
-                      <a href=""><i class="icofont-instagram"></i></a>
-                      <a href=""><i class="icofont-linkedin"></i></a>
-                    </div> --}}
                   </div>
                 </div>
               </div>
@@ -231,16 +231,53 @@
 
       </div>
     </section><!-- End Team Section -->
+    <section  class="team">
+        <div class="container-fluid" >
+
+
+    <div class="section-title container" data-aos="fade-up">
+        <h2>{{ __('home.Contact title') }}</h2>
+        <p>{{ __('home.Contact') }}</p>
+      </div>
+
+          <div class="row" data-aos="fade-left" id="social" >
+              <div class="col-lg-3 col-md-6" style="background-color: rgba(1, 3, 111, 0.5)">
+                  <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="pic"><a href="{{ $info->twitter_link }}" style="font-size: 6em;color:#00aced"><i class="icofont-twitter"></i></a></div>
+
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6" style="background-color: rgba(1, 3, 111, 0.5)">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="pic"><a href="{{ $info->facebook_link }}" style="font-size: 6em;color: #3b5998"><i class="icofont-facebook"></i></a></div>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" style="background-color: rgba(1, 3, 111, 0.5)">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="pic"><a href="{{ $info->instagram_link }}" style="font-size: 6em;color:#c32aa3"><i class="icofont-instagram"></i></a></div>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" style="background-color: rgba(1, 3, 111, 0.5)">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="pic"><a href="{{ $info->linkedin_link }}" style="font-size: 6em;color:#007bb6"><i class="icofont-linkedin"></i></a></div>
+
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
 
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
 
-        <div class="section-title" data-aos="fade-up">
+        {{-- <div class="section-title" data-aos="fade-up">
           <h2>{{ __('home.Contact title') }}</h2>
           <p>{{ __('home.Contact') }}</p>
-        </div>
+        </div> --}}
 
         <div class="row">
 

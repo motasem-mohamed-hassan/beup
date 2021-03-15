@@ -11,6 +11,7 @@ class About extends Model
         , 'body_title_1_en', 'body_title_1_ar', 'body_description_1_en', 'body_description_1_ar'
         , 'body_title_2_en', 'body_title_2_ar', 'body_description_2_en', 'body_description_2_ar'
         , 'body_title_3_en', 'body_title_3_ar', 'body_description_3_en', 'body_description_3_ar'
+        , 'header_sec1_en', 'header_sec1_ar', 'header_sec2_en', 'header_sec2_ar', 'header_image'
     ];
 
 }

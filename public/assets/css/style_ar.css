@@ -234,6 +234,10 @@ h6 {
     color: #fff;
     text-decoration: none;
 }
+.mobile-nav-toggle i {
+    margin-right: 1800%;
+}
+
 
 .nav-menu .drop-down ul {
     display: block;
@@ -654,7 +658,6 @@ section {
     padding: 0;
     line-height: 1px;
     margin: 0 0 5px 0;
-    letter-spacing: 2px;
     text-transform: uppercase;
     color: #aaaaaa;
     font-family: "Tajawal", sans-serif;

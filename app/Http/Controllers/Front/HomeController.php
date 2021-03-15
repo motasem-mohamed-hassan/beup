@@ -22,7 +22,7 @@ class HomeController extends Controller
         $team = Team::select('id', 'name_'.LaravelLocalization::getCurrentLocale().' as name',
             'position_'.LaravelLocalization::getCurrentLocale().' as position','image'
         )->get();
-        
+
         $info = Info::select('phone', 'email', 'location_'.LaravelLocalization::getCurrentLocale().' as location',
             'whatsapp_number', 'location_link', 'facebook_link', 'twitter_link', 'instagram_link', 'linkedin_link'
         )->first();
@@ -38,7 +38,11 @@ class HomeController extends Controller
             'body_title_2_'.LaravelLocalization::getCurrentLocale().' as body_title_2',
             'body_description_2_'.LaravelLocalization::getCurrentLocale().' as body_description_2',
             'body_title_3_'.LaravelLocalization::getCurrentLocale().' as body_title_3',
-            'body_description_3_'.LaravelLocalization::getCurrentLocale().' as body_description_3'
+            'body_description_3_'.LaravelLocalization::getCurrentLocale().' as body_description_3',
+            'header_sec1_'.LaravelLocalization::getCurrentLocale().' as header_sec1',
+            'header_sec2_'.LaravelLocalization::getCurrentLocale().' as header_sec2',
+            'header_image'
+
         )->first();
 
         return view('front.content.home', compact('categories', 'team', 'info', 'posts', 'logos', 'about'));

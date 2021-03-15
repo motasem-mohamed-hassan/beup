@@ -8,4 +8,5 @@ return [
 'Team' => 'Team',
 'Categories' => 'Services',
 'Contact' => 'Contact',
+'Useful Links' => 'Useful Links',
 ];

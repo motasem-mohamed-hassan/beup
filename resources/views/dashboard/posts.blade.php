@@ -54,7 +54,7 @@
                                     <p>{{ $post->category->name_en }}</p>
                                 </td>
                                 <td class="project-state">
-                                    <img src="{{ asset('storage/avatars/'.$post->image) }}" style="width: 100%">
+                                    <img src="{{ asset('storage/posts/'.$post->image) }}" style="width: 100%">
                                 </td>
                                 <td class="project-actions text-right">
                                     <a class="btn btn-primary btn-sm" href="{{ route('dashboard.post.show', $post->id) }}">

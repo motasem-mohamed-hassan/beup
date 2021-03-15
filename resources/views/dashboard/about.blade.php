@@ -2,7 +2,7 @@
 @section('content')
 <div class="row">
     <div class="col-md-12">
-        <form action="{{ route('dashboard.about.update') }}" method="post">
+        <form action="{{ route('dashboard.about.update') }}" method="post" enctype="multipart/form-data">
             @csrf
             @method('put')
 
@@ -119,6 +119,44 @@
                             <textarea rows="5" type="text" class="form-control" name="body_description_3_ar">{{ $about->body_description_3_ar }}</textarea>
                         </div>
                     </div>
+                    <hr>
+
+                    <div class="form-group">
+                        <label class="offset-2">Header Sec 1 EN</label>
+                        <div class="input-group col-md-10 offset-2">
+                            <textarea rows="5" type="text" class="form-control" name="header_sec1_en">{{ $about->header_sec1_en }}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="offset-2">Header Sec 1 AR</label>
+                        <div class="input-group col-md-10 offset-2">
+                            <textarea rows="5" type="text" class="form-control" name="header_sec1_ar">{{ $about->header_sec1_ar }}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="offset-2">Header Sec 2 EN</label>
+                        <div class="input-group col-md-10 offset-2">
+                            <textarea rows="5" type="text" class="form-control" name="header_sec2_en">{{ $about->header_sec2_en }}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="offset-2">Header Sec 2 AR</label>
+                        <div class="input-group col-md-10 offset-2">
+                            <textarea rows="5" type="text" class="form-control" name="header_sec2_ar">{{ $about->header_sec2_ar }}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="offset-2">Header image</label>
+                        <div class="btn btn-info btn-file">
+                          <i class="fas fa-paperclip"></i> Attachment Image
+                          <input type="file" name="header_image">
+                        </div>
+                    </div>
+
+
+
+
+
 
 
                     <div class="form-group">

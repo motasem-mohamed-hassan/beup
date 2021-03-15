@@ -82,6 +82,13 @@ class DatabaseSeeder extends Seeder
             'body_description_3_en'         => 'Be UP has a modern project management system based on agile methodology from requirements business analysis to quality control and testing then technical support.',
             'body_description_3_ar'         => '
                                                 تعتمد بى أب على نظام سير عمل للمشروعات مبني على أحدث الطرق من تحليل وكتابة متطلبات العمل إلى مرحلة اختبارات الجودة ثم الدعم الفني',
+            'header_sec1_en'   => 'Enter Smart Applications’ World with',
+            'header_sec1_ar'   => 'انضم الى عالم التطبيقات الذكية مع',
+
+            'header_sec2_en'   => 'We are team of talented designers making websites',
+            'header_sec2_ar'   => 'نحن فريق من المصممين و المبرمجين المحترفين لتصميم أفضل التصميمات و التطبيقات',
+
+
         ]);
 
         DB::table('categories')->insert([

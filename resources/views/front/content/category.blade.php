@@ -6,7 +6,7 @@
 
     <div class="row">
         <div class=" col-md-8 pt-5 order-2 order-md-1 text-align-center" data-aos="fade-up">
-        <h3 class="align-center">{{ $this_category->name }}</h3></a>
+        <h3 style="text-align:center">{{ $this_category->name }}</h3></a>
         <p class="font-italic ">
             {{ $this_category->description }}
         </p>

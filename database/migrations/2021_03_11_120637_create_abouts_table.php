@@ -41,7 +41,12 @@ class CreateAboutsTable extends Migration
             $table->text('body_description_3_en')->nullable();
             $table->text('body_description_3_ar')->nullable();
 
+            $table->text('header_sec1_en')->nullable();
+            $table->text('header_sec1_ar')->nullable();
+            $table->text('header_sec2_en')->nullable();
+            $table->text('header_sec2_ar')->nullable();
 
+            $table->string('header_image')->nullable();
             $table->timestamps();
         });
     }

@@ -8,4 +8,5 @@ return [
 'Team' => 'فريق العمل',
 'Categories' => 'خدماتنا',
 'Contact' => 'اتصل بنا',
+'Useful Links' => 'روابط هامة',
 ];

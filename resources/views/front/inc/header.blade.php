@@ -1,13 +1,17 @@
 <header id="header" class="fixed-top d-flex align-items-center ">
     <div class="container d-flex align-items-center ">
 
-      <div class="logo ">
-        <h1 style="margin:5px -8px 0px ;" class="text-light"><a href="{{ route('home') }}"><span>BE UP AGENCY</span><img src="assets/img/beup.png" alt="" class="img-fluid" style="width: 40px;margin-top:10px"></a></h1>
-      </div>
+        <div class="logo " id="logo">
+            @if(LaravelLocalization::getCurrentLocale() == 'en')
+                <h1 style="margin:5px -8px 0px ;" class="text-light"><a href="{{ route('home') }}"><img src="{{ asset('assets/img/beup.png') }}" alt="" class="img-fluid" style="width: 40px;margin-top:8px"><span>BE UP AGENCY</span></a></h1>
+            @else
+                <h1 style="margin:5px -8px 0px ;" class="text-light"><a href="{{ route('home') }}"><span>BE UP AGENCY</span><img src="{{ asset('assets/img/beup.png') }}" alt="" class="img-fluid" style="width: 40px;margin-top:8px"></a></h1>
+            @endif
+          </div>
 
       <nav class="nav-menu d-none d-lg-block m-auto">
         <ul>
-          <li class="active"><a href="index.html">{{ __('header.Home') }}</a></li>
+          <li class="active"><a href="{{ route('home') }}">{{ __('header.Home') }}</a></li>
           <li><a href="#about">{{ __('header.About') }}</a></li>
           {{-- <li><a href="#features">{{ __('header.Features') }}</a></li> --}}
           <li><a href="#gallery">{{ __('header.Gallery') }}</a></li>

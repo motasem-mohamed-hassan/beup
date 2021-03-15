@@ -62,7 +62,7 @@
                                     category_description_en="{{ $category->description_en }}"
                                     category_description_ar="{{ $category->description_ar }}"
                                     category_id="{{ $category->id }}"
-                                    class="btn btn-info" style='width:4em;height:35px' data-toggle="modal" data-target="#editCategoryModal">Edit</button>
+                                    style='width:5em;height:35px' class="editBtn btn btn-sm btn-primary mr-1 edit-category" data-toggle="modal" data-target="#editCategoryModal">تعديل</button>
 
                                 @csrf
                                 <button style='width:4.25em;height:35px' type="submit" category_id="{{ $category->id }}" class="delete_btn btn btn-sm ml-1 btn-danger">Delete</button>
@@ -148,7 +148,7 @@
                                         category_description_ar="${description_ar}"
 
                                         category_id="${id}"
-                                        class="btn btn-info" style='width:4em;height:35px' class="editBtn btn btn-sm btn-primary mr-1 edit-category" data-toggle="modal" data-target="#editCategoryModal">Edit</button>
+                                        style='width:4em;height:35px' class="editBtn btn btn-sm btn-primary mr-1 edit-category" data-toggle="modal" data-target="#editCategoryModal">Edit</button>
 
                                     @csrf
                                     <button style='width:4.25em;height:35px' type="submit" category_id="${id}" class="delete_btn btn btn-sm ml-1 btn-danger">Delete</button>
