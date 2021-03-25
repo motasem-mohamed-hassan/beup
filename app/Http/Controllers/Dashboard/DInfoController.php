@@ -17,8 +17,8 @@ class DInfoController extends Controller
 
     public function update(Request $request)
     {
-        Info::find(1)->create($request->all());
-        
+        Info::find(1)->update($request->all());
+
         toastr()->success('updated successfully');
         return redirect()->back();
     }
